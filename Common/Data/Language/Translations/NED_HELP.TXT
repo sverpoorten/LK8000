@@ -1,6 +1,6 @@
-﻿# LK8000 NED_HLP.TXT 101210
-# Version: May 2013
-# Translation by: Rick Boerma. Retranslated by Senne Verpoorten.
+﻿# LK8000 NED_HLP.TXT updated 140214
+# Version: February 2014
+# Translated by Senne Verpoorten.
 # Aan deze vertaling kunnen geen rechten worden ontleend.
 # A single text line can be max 500 characters long
 # An entire help can be max 1024 characters total
@@ -1478,11 +1478,8 @@ Sectortype van alle keerpunten voor niet-AAT-opdrachten.
 [Cilinder] Een cilinder (cirkel). De straal (radius) van de cirkel is in te stellen bij Sectorradius.
 [FAI-sector] Een 90°-sector. De straal (radius) van de sector is in te stellen bij Sectorradius.
 [DAe 0.5/10] Het nationale Duitse sectortype: een cilinder met een radius van 500 m gecombineerd met een 10 km FAI-sector.
+[Lijn] Bissectricelijn tussen twee taakbenen. De straal wordt alleen gebruikt om het op de kaart te tekenen.
 
-#Type of sectors used for non-AAT tasks.
-#[Cylinder]  Barrel cylinder of specified radius.
-#[FAI sector]  90 degree sector centered at bisector, at specified range
-#[DAe 0.5/10] German national sector type, equivalent to 0.5 km radius barrel and 10 km FAI sector.
 
 @506
 Radius (cirkelstraal) van de cilinder of sector bij de keerpunten.
@@ -1572,13 +1569,8 @@ Als de wedstrijd geen tijdpoorten heeft, wordt deze waarde genegeerd.
 #For task races with at least 1 time gate, set the start local time. If gate number is 0, this value will be ignored.
 
 @532
- - Als de wedstrijd slechts één tijdpoort heeft zonder sluitingstijd, stel dan een grote waarde in, bijvoorbeeld 480 min.
- - Als de wedstrijd slechts één tijdpoort heeft met sluitingstijd, stel het tijdsinterval dan in op het aantal minuten beschikbare tijd.
- - Als de wedstrijd meer dan één tijdpoort heeft, stel dan het tijdsinterval in op het aantal minuten tussen twee poorten.
+Als de wedstrijd meer dan één tijdpoort heeft, stel dan het tijdsinterval in op het aantal minuten tussen twee poorten.
 
-#If you have more than 1 time gate, set the interval time IN MINUTES for the others.
-#If you have only 1 gate, closing at a certain time, set the time interval to that time difference.
-#If you have only 1 gate, and no closing time, set interval to a large value such as 480 minutes.
 
 @533
 Bepaalt wanneer de wedstrijd als gestart wordt beschouwd.
@@ -3087,9 +3079,119 @@ Deze instelling houdt geen rekening met de instelling voor THER0.
 @1264
 Wanneer bij een luchtruimwaarschuwing voor 'Tijdelijk stil' gekozen wordt en deze instelling op [Aan] staat, dan wordt alle luchtruim met dezelfde naam en klasse ook op 'Tijdelijk stil' gezet.
 
-#[Group Ack]
-#Acknowledgement of one airspace is valid for all airspaces with the same name and the same class.
 
+@1265
+Kies wat er moet gebeuren met uitgeschakeld luchtruim wanneer LK8000 herstart wordt.
+[Blijvend] Uitgeschakeld luchtruim blijft uitgeschakeld
+[Alleen nu] Alle luchtruim wordt weer actief nadat LK8000 herstart is.
+
+
+@1266
+Stel de (lokale) eindtijd voor de laatste tijdpoort in wanneer de taak een tijdpoort heeft.
+Deze waarde wordt genegeerd wanneer er geen tijdpoorten zijn.
+
+# [Time Gate]
+# For task races with at least 1 time gate, set the end local time of last gate. 
+# If gate number is 0, this value will be ignored.
+
+
+
+@1268
+Dit stelt de 28%/45% FAI-grens in voor grote driehoekstaken.
+500 km voor DMSt en OLC-competities
+750 km voor FAI-competities
+
+
+#[FAI Triangle Threshold]
+#adjust the big FAI 28%/45% triangle threshold
+#500km for DMSt and OLC regulations
+#750km for FAI regulations
+
+
+
+@1269
+Kies of je een herinnering voor je wiel wilt krijgen op de ingestelde hoogte.
+[Uit] Geen herinnering
+[Landbaar] Herinnering als je altitude lager is dan de ingestelde hoogte boven het beste alternatieve landingspunt. Je dient wel binnen 3,7 km van dit punt te zijn. Aangeraden voor bergvliegen.
+[Altijd] Herinnering als je hoogte AGL lager is dan de ingestelde hoogte. Aangeraden voor vlakke landen.
+De waarschuwing wordt slechts eenmaal getoond onder de ingestelde hoogte. Het wordt weer geactiveerd door 100 m boven deze hoogte te stijgen.
+
+
+@1270
+De hoogte voor de wielwaarschuwing. Zie de help bij Wielwaarsch. voor meer informatie.
+
+@1271 
+QNH (in Pa) welke gebruikt wordt als uitvoeraltitude voor sommige uitvoermodi. De standaardwaarde is 101325 Pa.
+
+@1272 
+De stijgdrempel in m/s waarbij de akoestische vario start.
+
+@1273 
+De stijgdrempel in m/s waarbij de akoestische vario stopt.
+
+@1274 
+De daaldrempel in (negatieve) m/s waarbij de akoestische vario start.
+
+@1275 
+De daaldrempel in (negatieve) m/s waarbij de akoestische vario stopt.
+
+@1276
+Ruisfilterinstelling voor de Kalmanfilter.
+
+@1277 
+De geluidsfrequentie in Hz voor stijggeluiden, bij een stijgen van 0 m/s. Dit is dus de referentiefrequentie voor stijgen.
+
+@1278 
+De toenamestap in Hz voor de geluidsfrequentie voor stijggeluiden, per 1 m/s.
+
+@1279 
+De geluidsfrequentie in Hz voor daalgeluiden, bij een dalen van 0 m/s. Dit is dus de referentiefrequentie voor dalen.
+
+@1280 
+De verminderingsstap in Hz voor de geluidsfrequentie voor stijggeluiden, per -1 m/s.
+
+@1281 
+Het volume van de akoestische vario.
+0.1 is ongeveer half zo luid als 1.0
+
+@1282 
+Het tempo aan piepjes van de akoestische vario.
+Een getal kleiner dan 1.0 betekent een hoger tempo. 0.5 is dan ook dubbel zo snel als 1.0 (normaal).
+
+@1283 
+Vink aan om hardwareaudio te gebruiken wanneer het apparaat verbonden is met BlueFly.
+
+@1284 
+Vink aan om hardwareaudio te gebruiken wanneer het apparaat niet verbonden is met BlueFly.
+
+@1285 
+Stel de tijdsduur in gedurende dewelke je apparaat mag proberen een Bluetoothverbinding te maken, na opstarten van LK8000.
+
+@1286 
+Uitvoermodus:
+[0] BlueFlyVario (standaard) - Niet ondersteund
+[1] LK8EX1
+[2] LX - Niet ondersteund
+[3] FlyNet
+
+@1287 
+Uitvoerfrequentie van gegevens per 20 ms:
+[1] Elke 20 ms
+[2] Elke 2x20 = 40 ms
+enz.
+
+@1288
+Helling van de ESS-kegel.
+
+@1289
+Hoogte van de ESS-kegelbasis.
+
+@1290
+Kies of de luchtruimsonar standaard is ingeschakeld. De sonar geeft alarmsignalen bij nadering van een luchtruim.
+Merk op dat deze instelling tijdelijk gewijzigd kan worden via de menuknoppen. Na opnieuw opstarten van LK8000 wordt deze instelling weer gebruikt.
+
+@1291
+Straal van de ESS-kegelbasis.
 
 @9999
 Helaas, er is geen help beschikbaar...

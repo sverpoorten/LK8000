@@ -1,7 +1,7 @@
 ﻿# LK8000 NEDERLANDS MESSAGES - NED_MSG.TXT
-# MASTER UPDATED:  121005
-# Version: February 2013
-# Retranslated by Senne Verpoorten
+# MASTER UPDATED:  140221
+# Version: February 2014 (LK8000 v5.0)
+# Translated by Senne Verpoorten
 # This file is loaded on startup and all messages are stored internally.
 # If you are translating these messages, try to respect sizes.
 # The first _@Mn_  are the indexes, and you cannot change them!
@@ -982,7 +982,9 @@ _@M943_ "Semi-transparant"
 _@M944_ "Transparantie "
 _@M945_ "Omtrek met patroon"
 _@M946_ "Omtrek met semi-transparant patroon"
-
+_@M947_ "FLARMSIGNAAL VERLOREN"
+_@M948_ "Gevonden"
+_@M949_ "KP"
 _@M950_ "Transparantie infobalk "
 _@M951_ "Kan RX-data niet stoppen!"
 _@M952_ "Kan data niet naar de poort versturen!"
@@ -1011,7 +1013,9 @@ _@M964_ "Scherm is ontgrendeld"
 # Menu buttons, MAX 8 character per line! Keep \n !
 _@M965_ "Ontgrndl\nscherm"
 _@M966_ "Vergrndl\nscherm"
-
+_@M967_ "Luchtruim verandert "
+_@M968_ "Alleen nu"
+_@M969_ "Blijvend"
 #
 # GPS and COM port warnings
 #
@@ -1565,6 +1569,7 @@ _@M1619_ "2.4 LUCHTR "
 _@M1620_ "3.1 ALG "
 _@M1621_ "3.2 HIST "
 _@M1622_ "3.3 THER "
+_@M1623_ "1.7 HSI "
 
 # New airspace messages
 _@M1630_ "Hoogtemarge "
@@ -1843,6 +1848,34 @@ _@M1825_ "Voeg in voor"
 _@M1826_ "Vervang"
 _@M1827_ "Voeg toe voor finish"
 _@M1828_ "Voeg toe na finish"
+
+
+# Gear warning alarm
+_@M1829_ "Wielwaarsch. "
+_@M1830_ "Hoogte wielwaarsch.  "
+_@M1831_ "Uit"
+_@M1832_ "Bij landbaar"
+_@M1833_ "Altijd"
+_@M1834_ "Check wiel!"
+
+# oudie 2 bluetooth
+_@M1835_ "Verbinding maken mislukt"
+_@M1836_ "Opzoeken"
+_@M1837_ "Koppelen"
+_@M1838_ "Ontkoppelen"
+
+# Reverse task
+_@M1850_ "Taak\nomkeren"
+_@M1851_ "Taak omkeren"
+_@M1852_ "Taak omkeren?"
+_@M1853_ "Taak omgekeerd!"
+
+# HSI
+_@M1860_ "HSI"
+
+_@M1870_ "Luchtruimsonar "
+
+
 ############################################################
 #                  - MENU MESSAGES - 
 #
@@ -2009,6 +2042,39 @@ _@M2148_ "Auto, fiets of te voet (trekking)"
 _@M2149_ "Tijdens thermiek"
 _@M2150_ "Tijdens thermiek en kruisvlucht"
 
+_@M2151_ "T>\nKP-centrum"
+_@M2153_ "Start sluittijd "
+
+_@M2154_ "Verzend\nIGC"
+_@M2155_ "Verzend"
+_@M2156_ "Verzend IGC-bestand"
+_@M2157_ "Kies apparaat"
+
+#BlueFlyVario
+_@M2158_ "QNH-uitvoer"
+_@M2159_ "Stijgdrempel"
+_@M2160_ "Stijg uit-drempel"
+_@M2161_ "Daaldrempel"
+_@M2162_ "Daal uit-drempel"
+_@M2163_ "Ruisfilter"
+_@M2164_ "Stijgfreq. nul"
+_@M2165_ "Stijgfreq. stap"
+_@M2166_ "Daalfreq. nul"
+_@M2167_ "Daalfreq. stap"
+_@M2168_ "Volume"
+_@M2169_ "Tempo"
+_@M2170_ "Audio verbonden"
+_@M2171_ "Audio ontkoppeld"
+_@M2172_ "Bluetooth-timeout"
+_@M2173_ "Uitvoermodus"
+_@M2174_ "Uitvoerfrequentie"
+
+_@M2175_ "Conische ESS"
+_@M2176_ "Kegelhelling"
+_@M2177_ "Hoogte basis"
+_@M2178_ "Straal basis"
+
+
 # New CustomKey labels for Custom Menu
 _@M2200_ "----"
 _@M2201_ "Menu"
@@ -2042,7 +2108,6 @@ _@M2228_ "Flarm\nradar"
 _@M2229_ "Herstart\nodometer"
 _@M2230_ "Forceer\ngeland"
 _@M2231_ "ACTIEF"
-# 2232 unused but reserved for mmaps
 _@M2232_ "abcd"
 _@M2233_ "Overlay"
 _@M2234_ "TEKST"
@@ -2057,7 +2122,24 @@ _@M2242_ "Sonar\nAAN"
 _@M2243_ "Sonar\nUIT"
 _@M2244_ "Apparaat\nsetup"
 _@M2245_ "Apparaat\nopslaan"
+_@M2246_ "Herstel\nbeeld"
+_@M2247_ "28/45 FAI-grens "
+_@M2248_ "Geen punt dichtbij gevonden!"
 
-# MAX 2250! 
+# DO NOT TRANSLATE 2249
+_@M2249_ "DspMode"
+
+
+
+# MAX 2500! 
 # (Reserved for custom menus up to 2300!)
-# Note for developers: remember LKLanguage MAX_MESSAGE limit
+# Note for developers: remember LKLanguage MAX_MESSAGE limit (2500)
+
+
+# S = Start Task Point
+_@M2301_ "S"
+# T = Task Point
+_@M2302_ "T"
+# F = Finish point
+_@M2303_ "F"
+_@M2304_ "Wielwaarschuwing uitgeschakeld!"
